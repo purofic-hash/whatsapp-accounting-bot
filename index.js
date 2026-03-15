@@ -16,7 +16,9 @@ const anthropic = new Anthropic({ apiKey: ANTHROPIC_API_KEY });
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
-    executablePath: process.env.CHROMIUM_PATH || '/run/current-system/sw/bin/chromium' ,
+    executablePath: process.env.CHROMIUM_PATH ||
+      require('child_process').execSync('which chromium || which chromium-browser || which google-chrome || echo ""').toString().trim() ||
+      undefined,
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
