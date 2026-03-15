@@ -1,0 +1,19 @@
+{
+  "name": "whatsapp-accounting-bot",
+  "version": "2.0.0",
+  "description": "WhatsApp accounting bot for Indian manufacturing business",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.0",
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.7.0",
+    "googleapis": "^140.0.0",
+    "qrcode": "^1.5.3"
+  }
+}
